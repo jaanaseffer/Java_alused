@@ -10,7 +10,7 @@ public class Main {
         if (number >=0) {
             System.out.println("The number is positive.");
         } else {
-            System.out.printf("The number is not positive.");
+            System.out.println("The number is not positive.");
         }
     }
 }
