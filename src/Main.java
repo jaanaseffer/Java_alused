@@ -2,11 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        printText();
-
+        printStars(5);
+        printStars(3);
+        printStars(9);
     }
-    public static void printText() {
-        System.out.println("In the beginning there were the swamp, the hoe and Java.");
+    private static void printStars(int amount) {
+        // you can print one star with the command
+        // System.out.print("*");
+        // call this command amount times
+        int i = 1;
+        while (i <= amount){
+            System.out.print("*");
+            i++;
+        }
+        System.out.println();
     }
 }
 
