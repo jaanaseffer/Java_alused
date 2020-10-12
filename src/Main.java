@@ -3,16 +3,19 @@ import java.util.Scanner;
 public class Main {
         public static void main(String[] args) {
             Scanner input = new Scanner(System.in);
-            System.out.print("Type the first number: ");
-            int numberOne = Integer.parseInt(input.nextLine());
-            System.out.print("Type the second number: ");
-            int numberTwo = Integer.parseInt(input.nextLine());
-            if (numberOne < numberTwo) {
-                System.out.println("Greater number: " + numberTwo);
-            } else if (numberOne > numberTwo){
-                System.out.println("Greater number: " + numberOne);
+            Scanner reader = new Scanner(System.in);
+            String usernameOne = "alex";
+            String usernameTwo = "emily";
+            String passwordOne = "mightyducks";
+            String passwordTwo = "cat";
+            System.out.print("Type your username: ");
+            String username = reader.nextLine();
+            System.out.print("Type your password: ");
+            String password = reader.nextLine();
+            if ((usernameOne.equals(username) && passwordOne.equals(password)) || (usernameTwo.equals(username) && passwordTwo.equals(password))) {
+                System.out.println("You are logged into the system!");
             } else {
-                System.out.println("The numbers are equal!");
+                System.out.println("Your username or password was invalid!");
             }
     }
 }
