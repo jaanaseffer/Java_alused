@@ -4,13 +4,14 @@ public class Main {
         public static void main(String[] args) {
             Scanner input = new Scanner(System.in);
             System.out.println("Type a number: ");
-            int number = Integer.parseInt(input.nextLine());
-            int fact = 1;
-            int i = 1;
-            while(number >= i) {
-                fact = fact * i;
+            int power = Integer.parseInt(input.nextLine());
+            int number = 2;
+            int i = 0;
+            int sum = 0;
+            while(power >= i) {
+                sum = (int) (sum + Math.pow(number, i));
                 i++;
             }
-            System.out.println("Factorial is " + fact);
+            System.out.println("The result is " + sum);
     }
 }
