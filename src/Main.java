@@ -3,15 +3,14 @@ import java.util.Scanner;
 public class Main {
         public static void main(String[] args) {
             Scanner input = new Scanner(System.in);
-            System.out.println("First: ");
-            int first = Integer.parseInt(input.nextLine());
-            System.out.println("Last: ");
-            int last = Integer.parseInt(input.nextLine());
-            int sum = 0;
-            while(first <= last) {
-                sum += first;
-                first++;
+            System.out.println("Type a number: ");
+            int number = Integer.parseInt(input.nextLine());
+            int fact = 1;
+            int i = 1;
+            while(number >= i) {
+                fact = fact * i;
+                i++;
             }
-            System.out.println("The sum is " + sum);
+            System.out.println("Factorial is " + fact);
     }
 }
