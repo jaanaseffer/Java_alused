@@ -7,9 +7,11 @@ public class Main {
             int first = Integer.parseInt(input.nextLine());
             System.out.println("Last: ");
             int last = Integer.parseInt(input.nextLine());
-            while (first <= last) {
-                System.out.println(first);
+            int sum = 0;
+            while(first <= last) {
+                sum += first;
                 first++;
             }
+            System.out.println("The sum is " + sum);
     }
 }
