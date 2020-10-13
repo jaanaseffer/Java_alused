@@ -1,28 +1,37 @@
 public class Main {
     public static void main(String[] args) {
-        printTriangle(4);
+        xmasTree(10);
     }
     public static void printWhitespaces(int size) {
         int i = 0;
         while (i < size) {
             System.out.print(" ");
-            i++;
+            size--;
         }
     }
     public static void printStars(int size) {
         int i = 0;
         while (i < size){
             System.out.print("*");
-            i++;
+            size--;
         }
     }
-    public static void printTriangle(int size) {
-        int i = 1;
-        while (i <= size) {
-            printWhitespaces(size-i);
-            printStars(i);
+    public static void xmasTree(int height) {
+        int i = 0;
+        int spaces = height -1 ;
+        int stars = 1;
+        while (i < height) {
+            printWhitespaces(spaces);
+            printStars(stars);
+            stars += 2;
+            spaces -= 1;
             i++;
             System.out.println();
         }
+            printWhitespaces(height-2);
+            printStars(3);
+            System.out.println();
+            printWhitespaces(height-2);
+            printStars(3);
     }
 }
