@@ -4,18 +4,17 @@ public class Main {
         public static void main(String[] args) {
             Scanner input = new Scanner(System.in);
             Scanner reader = new Scanner(System.in);
-            String usernameOne = "alex";
-            String usernameTwo = "emily";
-            String passwordOne = "mightyducks";
-            String passwordTwo = "cat";
-            System.out.print("Type your username: ");
-            String username = reader.nextLine();
-            System.out.print("Type your password: ");
-            String password = reader.nextLine();
-            if ((usernameOne.equals(username) && passwordOne.equals(password)) || (usernameTwo.equals(username) && passwordTwo.equals(password))) {
-                System.out.println("You are logged into the system!");
-            } else {
-                System.out.println("Your username or password was invalid!");
-            }
+            int sum = 0;
+            int read;
+            System.out.print("Type the first number: ");
+            read = Integer.parseInt(input.nextLine());
+            sum = sum + read;
+            System.out.print("Type the second number: ");
+            read = Integer.parseInt(input.nextLine());
+            sum = sum +read;
+            System.out.print("Type the third number: ");
+            read = Integer.parseInt(input.nextLine());
+            sum = sum +read;
+            System.out.println("Sum: " + sum);
     }
 }
