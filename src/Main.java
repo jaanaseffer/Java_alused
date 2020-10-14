@@ -1,26 +1,19 @@
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        ArrayList<String> brothers = new ArrayList<>();
-        brothers.add("Dick");
-        brothers.add("Henry");
-        brothers.add("Michael");
-        brothers.add("Bob");
-
-        System.out.println("brothers:");
-        System.out.println(brothers);
-
-        Collections.sort(brothers);
-
-        removeLast(brothers);
-
-        System.out.println(brothers);
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+        System.out.println("The average is: " + average(list));
     }
-    public static void removeLast(ArrayList<String> list) {
-        list.remove(list.size() - 1);
+    public static double average(ArrayList<Integer> list) {
+        int sum = 0;
+        for (int i : list) {
+            sum = sum + i;
+        }
+        return (double) sum / list.size();
     }
 }
