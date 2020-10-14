@@ -1,13 +1,16 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-
-        double answer = average(4, 3, 6, 1);
-        System.out.println("Average: " + answer);
-
-    }
-    public static double average(int number1, int number2, int number3, int number4) {
-        int sum = number1 + number2 + number3 + number4;
-        double average = (double) sum / 4;
-        return average;
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Type your name: ");
+        String name = reader.nextLine();
+        if (name.length() < 3) {
+            System.out.println();
+        } else {
+            System.out.println("1. character: " + name.charAt(0));
+            System.out.println("2. character: " + name.charAt(1));
+            System.out.println("3. character: " + name.charAt(2));
+        }
     }
 }
