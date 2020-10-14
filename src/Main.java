@@ -6,17 +6,14 @@ public class Main {
         Scanner reader = new Scanner(System.in);
         ArrayList<String> words = new ArrayList<>();
         while (true) {
-            System.out.println("Type a word: ");
+            System.out.println("Type a word:");
             String word = reader.nextLine();
-            if (word.isEmpty()) {
+            if (!words.contains(word)) {
+                words.add(word);
+            } else {
+                System.out.println("you gave the word " + word + " twice");
                 break;
             }
-            words.add(word);
         }
-        System.out.println("You typed the following words:");
-        for (String word: words) {
-            System.out.println(word);
-        }
-
     }
 }
