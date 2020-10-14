@@ -3,11 +3,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        Scanner input = new Scanner(System.in);
-        System.out.println("Type a word: ");
-        String word = reader.nextLine();
-        System.out.println("Length of the first part: ");
-        int length = Integer.parseInt(input.nextLine());
-        System.out.println("Result: " + word.substring(0, length));
+        System.out.println("Type your text: ");
+        String text = reader.nextLine();
+        System.out.println("In reverse order: " + reverse(text));
+    }
+    public static String reverse(String text) {
+        String help = "";
+        int i = text.length() - 1;
+        while (i >= 0) {
+            char character = text.charAt(i);
+            help = help + character;
+            i--;
+        }
+        return help;
     }
 }
