@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,13 +8,11 @@ public class Main {
         list.add(2);
         list.add(7);
         list.add(2);
-        System.out.println("The average is: " + average(list));
+        System.out.println("The greatest number is: " + greatest(list));
     }
-    public static double average(ArrayList<Integer> list) {
-        int sum = 0;
-        for (int i : list) {
-            sum = sum + i;
-        }
-        return (double) sum / list.size();
+    public static int greatest(ArrayList<Integer> list) {
+        Collections.sort(list);
+        Collections.reverse(list);
+        return list.get(0);
     }
 }
