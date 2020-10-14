@@ -5,20 +5,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        ArrayList<String> words = new ArrayList<>();
-        while (true) {
-            System.out.println("Type a word:");
-            String word = reader.nextLine();
-            if (word.isEmpty()) {
-                break;
-            }
-            words.add(word);
-        }
-        Collections.sort(words);
-        System.out.println("You typed the following words:");
-        for (String word: words) {
-            System.out.println(word);
-        }
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Hallo");
+        list.add("Ciao");
+        list.add("Hello");
+        System.out.println("There are this many items in the list:");
+        System.out.println(countItems(list));
 
+    }
+    public static int countItems(ArrayList<String> list) {
+        int listSize = list.size();
+        return listSize;
     }
 }
