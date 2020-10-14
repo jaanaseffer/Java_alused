@@ -5,27 +5,22 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        ArrayList<String> programmingLanguages = new ArrayList<>();
-        programmingLanguages.add("Pascal");
-        programmingLanguages.add("Java");
-        programmingLanguages.add("Python");
-        programmingLanguages.add("Ruby");
-        programmingLanguages.add("C++");
+        ArrayList<String> brothers = new ArrayList<>();
+        brothers.add("Dick");
+        brothers.add("Henry");
+        brothers.add("Michael");
+        brothers.add("Bob");
 
-        print(programmingLanguages);
+        System.out.println("brothers:");
+        System.out.println(brothers);
 
-        removeFirst(programmingLanguages);
+        Collections.sort(brothers);
 
-        System.out.println();
+        removeLast(brothers);
 
-        print(programmingLanguages);
+        System.out.println(brothers);
     }
-    public static void print(ArrayList<String> printed) {
-        for (String word: printed) {
-            System.out.println(word);
-        }
-    }
-    public static void removeFirst(ArrayList<String> list) {
-        list.remove(0);
+    public static void removeLast(ArrayList<String> list) {
+        list.remove(list.size() - 1);
     }
 }
