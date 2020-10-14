@@ -1,37 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        xmasTree(10);
+
+        int answer = least(2, 7);
+        System.out.println("Least: " + answer);
+
     }
-    public static void printWhitespaces(int size) {
-        int i = 0;
-        while (i < size) {
-            System.out.print(" ");
-            size--;
+    public static int least(int number1, int number2) {
+        int least;
+        if (number1 < number2) {
+            least = number1;
+        } else if (number2 < number1) {
+            least = number2;
+        } else {
+            least = number1;
         }
-    }
-    public static void printStars(int size) {
-        int i = 0;
-        while (i < size){
-            System.out.print("*");
-            size--;
-        }
-    }
-    public static void xmasTree(int height) {
-        int i = 0;
-        int spaces = height -1 ;
-        int stars = 1;
-        while (i < height) {
-            printWhitespaces(spaces);
-            printStars(stars);
-            stars += 2;
-            spaces -= 1;
-            i++;
-            System.out.println();
-        }
-            printWhitespaces(height-2);
-            printStars(3);
-            System.out.println();
-            printWhitespaces(height-2);
-            printStars(3);
+        return least;
     }
 }
