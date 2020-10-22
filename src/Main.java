@@ -1,19 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        DecreasingCounter counter = new DecreasingCounter(100);
+        Menu caffee = new Menu();
 
-        counter.printValue();
+        caffee.addMeal("Hamburger");
+        caffee.addMeal("Fish'n'Chips");
+        caffee.addMeal("Sauerkraut");
 
-        counter.decrease();
-        counter.printValue();
+        caffee.printMeals();
 
-        counter.decrease();
-        counter.printValue();
+        caffee.clearMenu();
 
-        counter.reset();
-        counter.printValue();
-
-        counter.setInitial();
-        counter.printValue();
+        caffee.printMeals();
     }
 }
