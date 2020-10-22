@@ -1,25 +1,13 @@
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> list1 = new ArrayList<>();
-        ArrayList<Integer> list2 = new ArrayList<>();
+        DecreasingCounter counter = new DecreasingCounter(10);
 
-        list1.add(4);
-        list1.add(3);
+        counter.printValue();
 
-        list2.add(5);
-        list2.add(10);
-        list2.add(7);
+        counter.decrease();
+        counter.printValue();
 
-        combine(list1, list2);
-
-        System.out.println(list1);
-        System.out.println(list2);
-    }
-
-    public static void combine(ArrayList<Integer> first, ArrayList<Integer> second) {
-        first.addAll(second);
-        
+        counter.decrease();
+        counter.printValue();
     }
 }
