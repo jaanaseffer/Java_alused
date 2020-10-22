@@ -30,9 +30,6 @@ public class LyyraCard {
         if (amount >= 0) {
             this.balance += amount;
         }
-        if (this.balance > 150) {
-            this.balance = 150.0;
-        }
     }
 
 }
