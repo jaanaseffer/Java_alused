@@ -4,10 +4,16 @@ public class Main {
 
         counter.printValue();
 
-        counter.reset();
+        counter.decrease();
         counter.printValue();
 
         counter.decrease();
+        counter.printValue();
+
+        counter.reset();
+        counter.printValue();
+
+        counter.setInitial();
         counter.printValue();
     }
 }

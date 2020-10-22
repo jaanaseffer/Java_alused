@@ -1,8 +1,10 @@
 public class DecreasingCounter {
     private int value;
+    private int initialValue;
 
     public DecreasingCounter(int valueAtStart) {
         this.value = valueAtStart;
+        this.initialValue = valueAtStart;
     }
 
     public void printValue() {
@@ -17,6 +19,10 @@ public class DecreasingCounter {
 
     public void reset() {
         this.value = 0;
+    }
+
+    public void setInitial() {
+        this.value = this.initialValue;
     }
 
 }
