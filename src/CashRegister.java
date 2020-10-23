@@ -17,6 +17,16 @@ public class CashRegister {
         }
     }
 
+    public boolean payEconomical(LyyraCard card) {
+        if (card.balance() >= 2.50) {
+            this.economicalSold++;
+            card.pay(2.50);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public double payGourmet(double cashGiven) {
         if (cashGiven >= 4.00) {
             this.cashInRegister += 4.00;
@@ -24,6 +34,16 @@ public class CashRegister {
             return cashGiven - 4.00;
         } else {
             return cashGiven;
+        }
+    }
+
+    public boolean payGourmet(LyyraCard card) {
+        if (card.balance() >= 4.00) {
+            this.gourmetSold++;
+            card.pay(4.00);
+            return true;
+        } else {
+            return false;
         }
     }
 
