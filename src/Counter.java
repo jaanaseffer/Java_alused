@@ -43,4 +43,22 @@ public class Counter {
             this.value--;
         }
     }
+
+    public void increase(int increaseAmount) {
+        if (increaseAmount > 0) {
+            this.value += increaseAmount;
+        }
+    }
+
+    public void decrease(int decreaseAmount) {
+        if (this.check) {
+            if (this.value >= decreaseAmount) {
+                this.value -= decreaseAmount;
+            } else {
+                this.value = 0;
+            }
+        } else {
+            this.value -= decreaseAmount;
+        }
+    }
 }
