@@ -1,8 +1,25 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Student pekka = new Student("Pekka Mikkola", "013141590");
-        System.out.println("name: " + pekka.getName());
-        System.out.println("studentnumber: " + pekka.getStudentNumber());
-        System.out.println(pekka);
+        ArrayList<Student> students = new ArrayList<>();
+
+        Scanner reader = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("name: ");
+            String name = reader.nextLine();
+            if (name.isEmpty()) {
+                break;
+            }
+            System.out.println("studentnumber: ");
+            String studentnumber = reader.nextLine();
+            students.add(new Student(name, studentnumber));
+        }
+
+        for (Student student: students) {
+            System.out.println(student);
+        }
     }
 }
