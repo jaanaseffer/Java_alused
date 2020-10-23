@@ -1,9 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        Person pekka = new Person("Pekka", new MyDate(15, 2, 1983));
-        Person steve = new Person("Steve");
-
-        System.out.println( pekka );
-        System.out.println( steve );
+        int[] array = {5, 1, 3, 4, 2};
+        printElegantly(array);
     }
+
+    public static void printElegantly(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (i < array.length - 1) {
+                System.out.print(array[i] + ", ");
+            } else {
+                System.out.print(array[i]);
+            }
+        }
+    }
+
 }
