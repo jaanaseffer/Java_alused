@@ -61,4 +61,5 @@ public class Counter {
             this.value -= decreaseAmount;
         }
     }
+
 }
