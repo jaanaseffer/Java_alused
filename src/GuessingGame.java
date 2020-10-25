@@ -10,7 +10,15 @@ public class GuessingGame {
     public void play(int lowerLimit, int upperLimit) {
         instructions(upperLimit, lowerLimit);
 
-        // write the game logic here
+        while (lowerLimit != upperLimit) {
+            int average = average(lowerLimit, upperLimit);
+            if (isGreaterThan(average)) {
+                lowerLimit = average + 1;
+            } else {
+                upperLimit = average;
+            }
+        }
+        System.out.println("The number you're thinking of is " + upperLimit);
     }
 
     // implement here the methods isGreaterThan and average
@@ -44,5 +52,6 @@ public class GuessingGame {
 
     public int average(int firstNumber, int secondNumber) {
         return (firstNumber + secondNumber) / 2;
+
     }
 }
