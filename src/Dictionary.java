@@ -17,4 +17,8 @@ public class Dictionary {
     public void add(String word, String translation) {
         translated.put(word, translation);
     }
+
+    public int amountOfWords() {
+        return this.translated.size();
+    }
 }
