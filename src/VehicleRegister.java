@@ -1,4 +1,6 @@
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class VehicleRegister {
 
@@ -29,5 +31,18 @@ public class VehicleRegister {
         }
         owners.remove(plate);
         return true;
+    }
+
+    public void printRegistrationPlates() {
+        for (RegistrationPlate plate : owners.keySet()) {
+            System.out.println(plate);
+        }
+    }
+
+    public void printOwners() {
+        Set<String> ownerSet = new HashSet<>(owners.values());
+        for (String owner : ownerSet) {
+            System.out.println(owner);
+        }
     }
 }
