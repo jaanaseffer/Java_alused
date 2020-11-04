@@ -1,8 +1,9 @@
-public class CivilService implements NationalService {
-    public int daysLeft;
+public class MilitaryService implements NationalService {
 
-    public CivilService() {
-        this.daysLeft = 362;
+    int daysLeft = 0;
+
+    public MilitaryService(int daysLeft) {
+        this.daysLeft = daysLeft;
     }
 
     @Override
