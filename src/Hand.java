@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Hand {
     private ArrayList<Card> hand = new ArrayList<>();
@@ -10,5 +11,9 @@ public class Hand {
         for (Card card : this.hand) {
             System.out.println(card);
         }
+    }
+
+    public void sort() {
+        Collections.sort(this.hand);
     }
 }
