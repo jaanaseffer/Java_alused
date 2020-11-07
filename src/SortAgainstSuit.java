@@ -2,6 +2,10 @@ import java.util.Comparator;
 
 public class SortAgainstSuit implements Comparator<Card> {
     public int compare(Card card1, Card card2) {
-        return card1.getSuit()-card2.getSuit();
+        if (card1.getSuit() == card2.getSuit()) {
+            return card1.getValue() - card2.getValue();
+        } else {
+            return card1.getSuit() - card2.getSuit();
+        }
     }
 }

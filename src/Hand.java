@@ -27,4 +27,8 @@ public class Hand implements Comparable<Hand>{
         }
         return totalValue;
     }
+    public void sortAgainstSuit() {
+        this.hand.sort(new SortAgainstSuit());
+        System.out.println(this.hand);
+    }
 }
