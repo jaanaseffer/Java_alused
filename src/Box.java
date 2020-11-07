@@ -25,6 +25,6 @@ public class Box implements ToBeStored {
     }
 
     public String toString() {
-        return "Box: " + stuff.size() + "thins, total weight " + weight() + " kg";
+        return "Box: " + stuff.size() + " things, total weight " + weight() + " kg";
     }
 }
