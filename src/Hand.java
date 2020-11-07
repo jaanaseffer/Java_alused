@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Hand {
+public class Hand implements Comparable<Hand>{
     private ArrayList<Card> hand = new ArrayList<>();
 
     public void add(Card card) {
@@ -15,5 +15,16 @@ public class Hand {
 
     public void sort() {
         Collections.sort(this.hand);
+    }
+
+    public int compareTo(Hand hand) {
+        return this.totalValue() - hand.totalValue();
+    }
+    public int totalValue() {
+        int totalValue = 0;
+        for (Card card : this.hand) {
+            totalValue += card.getValue();
+        }
+        return totalValue;
     }
 }
