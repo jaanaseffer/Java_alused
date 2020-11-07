@@ -23,4 +23,10 @@ public class ShoppingBasket {
         }
         return sum;
     }
+
+    public void print() {
+        for (Purchase p : purchases.values()) {
+            System.out.println(p);
+        }
+    }
 }
