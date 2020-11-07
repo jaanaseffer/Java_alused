@@ -1,8 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
-public class Card{
+public class Card implements Comparable<Card>{
     public static final int SPADES  = 0;
     public static final int DIAMONDS  = 1;
     public static final int HEARTS = 2;
@@ -47,5 +43,19 @@ public class Card{
             suitAsString = "Clubs";
         }
         return valusAsString + " of " + suitAsString;
+    }
+    public int getValue() {
+        return value;
+    }
+    public int getSuit() {
+        return suit;
+    }
+
+    public int compareTo(Card card) {
+        if (this.value == card.getValue()) {
+            return this.suit - card.getSuit();
+        } else {
+            return this.value - card.getValue();
+        }
     }
 }
