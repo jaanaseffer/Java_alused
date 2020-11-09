@@ -70,4 +70,18 @@ public class MindfulDictionary {
             return false;
         }
     }
+
+    public boolean save() {
+        try {
+            writer = new FileWriter(this.file);
+            for (String key : this.finToEng.keySet()) {
+                writer.write(key + ":" + this.finToEng.get(key) + "\n");
+            }
+            writer.close();
+            return true;
+        }
+        catch (IOException e) {
+            return false;
+        }
+    }
 }

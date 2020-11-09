@@ -5,8 +5,9 @@ public class Main {
         MindfulDictionary dict = new MindfulDictionary("src/words.txt");
         dict.load();
 
-        System.out.println( dict.translate("apina") );
-        System.out.println( dict.translate("ohjelmointi") );
-        System.out.println( dict.translate("alla oleva") );
+        // using the dictionary
+        dict.add("tietokone", "computer");
+
+        dict.save();
     }
 }
