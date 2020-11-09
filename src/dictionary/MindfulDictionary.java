@@ -1,9 +1,11 @@
 package dictionary;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class MindfulDictionary {
     private HashMap<String, String> finToEng;
@@ -50,6 +52,22 @@ public class MindfulDictionary {
             String translation = this.engToFin.get(word);
             this.engToFin.remove(word);
             this.finToEng.remove(translation);
+        }
+    }
+
+    public boolean load() {
+        try {
+            Scanner reader = new Scanner(this.file);
+            while (reader.hasNext()) {
+                String line = reader.nextLine();
+                String[] parts = line.split(":");
+                this.finToEng.put(parts[0], parts[1]);
+                this.engToFin.put(parts[1], parts[0]);
+            }
+            return true;
+        }
+        catch (FileNotFoundException e) {
+            return false;
         }
     }
 }
