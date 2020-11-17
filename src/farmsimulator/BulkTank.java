@@ -6,10 +6,12 @@ public class BulkTank {
 
     public BulkTank() {
         this.capacity = 2000;
+        this.volume = 0;
     }
 
     public BulkTank(double capacity) {
         this.capacity = capacity;
+        this.volume = 0;
     }
 
     public double getCapacity(){
@@ -35,11 +37,10 @@ public class BulkTank {
     public double getFromTank(double amount) {
         if (amount > this.volume) {
             this.volume = 0;
-            return this.volume;
         } else {
             this.volume -= amount;
-            return this.volume;
         }
+        return this.volume;
     }
 
     @Override
